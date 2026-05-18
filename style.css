@@ -1,0 +1,433 @@
+/* Reset some basic elements */
+body, h1, p, a, button, input, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Container for all content to center it on the page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for the navigation menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover and active styles for navigation links */
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #a7d7c5; /* Pastel green color for active/hover */
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Main content styling */
+main h1 {
+    font-size: 2.5em; /* Increased font size for main headings */
+    font-weight: bold; /* Make headings bold */
+    margin-bottom: 20px; /* Spacing below headings */
+}
+
+main p {
+    font-size: 1.2em; /* Slightly larger paragraph text */
+}
+
+/* Style the form elements */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+button.btn-main,
+a.btn-main {
+    display: block;
+    width: auto;
+    padding: 15px 30px;
+    background-color: #a7d7c5; /* Pastel green color */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px; /* Space above the button */
+}
+
+button.btn-main:hover,
+a.btn-main:hover {
+    background-color: #95c0a9;
+}
+
+/* Style the search button */
+.search {
+    display: inline-block;
+}
+
+.btn-search {
+    display: inline-block;
+    vertical-align: top; /* Align the button with the top of the input */
+    margin-left: 3px; /* Adjust the margin between the input and button */
+    padding: 8px 10px;
+    background-color: #a7d7c5; /* Same color as navigation links */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px; /* Set the same height as the input */
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    margin-top: -16px; /* Adjust the top margin to move the button higher */
+
+
+}
+
+.btn-search:hover {
+    background-color: #95c0a9; /* Darker shade for hover effect */
+}
+
+form#search-form {
+    margin-top: 30px; /* Increase or decrease as needed */
+}
+
+/* Apply flexbox layout to the search container */
+.search {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+#university-name {
+    margin-right: 10px;
+    height: 40px; /* Set the same height as the button */
+}
+
+/* Optionally, adjust the alignment and size of the button */
+.btn-search {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+}
+
+/* Style adjustments for image container */
+.image-container {
+    text-align: center;
+    margin-top: 30px; /* Space from the header */
+}
+
+.image-container img {
+    width: 120%; /* Change this percentage to increase or decrease relative width */
+    max-width: 880px; /* Adjust this pixel value to set the maximum width */
+    height: auto; /* Keeps the aspect ratio of the image */
+    border-radius: 8px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .image-container img {
+        width: 100%; /* Adjust width for smaller screens */
+        max-width: none; /* Remove max-width restriction */
+    }
+
+    button.btn-main,
+    a.btn-main {
+        width: auto;
+    }
+
+    main h1,
+    main p {
+        text-align: center; /* Center text for smaller screens */
+    }
+
+}
+/* Add these styles to your existing style.css file */
+
+/* Styles for filters */
+.filters {
+    position: fixed;
+    top: 80px; /* Adjust the value so that it doesn't overlap your header */
+    left: 0;
+    width: 250px; /* Set the width of the filters box */
+    margin-left: 10px; /* Narrow left margin like e-commerce websites */
+    height: 100%;
+    overflow-y: auto; /* In case the filters exceed the height of the page */
+}
+.filters label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filters select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    background-color: #a7d7c5;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #95c0a9;
+}
+
+/* Styles for universities */
+.universities {
+    margin-left: 250px;
+}
+
+.university {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.university h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em; 
+}
+.university p {
+    font-size: 1em;
+}
+/* style.css */
+
+/* Position filters box on the left */
+.filters {
+    font-size: 0.8em;
+    margin-bottom: 20px; 
+}
+
+/* Style for filter box */
+.filter-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style for "show more details" link */
+.show-more-details {
+    color: blue !important;
+    cursor: pointer;
+}
+
+/* Hide details by default */
+.university-details {
+    display: none;
+}
+
+.content-wrapper {
+    padding-left: 270px; /* Same as the width of the filters + margin */
+}
+
+/* Styles for comparission page*/
+.comparison-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+    text-align: left; 
+}
+
+.university-comparison {
+    flex: 1; 
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px; 
+    text-align: left; 
+}
+
+
+.university-comparison h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.university-comparison p {
+    margin-bottom: 10px; 
+    line-height: 1.4; 
+    text-align: left; 
+}
+
+
+@media (max-width: 1024px) {
+    .comparison-result {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison-result {
+        padding: 0 10px; 
+    }
+
+    .university-comparison {
+        width: 100%; 
+    }
+}
+.input-row {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+.input-row {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+#university-input {
+    width: 300px; 
+    margin: 2;
+    padding: 0.5em; 
+}
+
+.selected-universities div {
+    margin-bottom: 10px; 
+}
+
+.selected-universities button {
+    margin-left: 5px; 
+}
+
+.btn-main {
+    font-size: 0.7em; 
+    line-height: 1; 
+    height: 40px; 
+    padding: 10px 20px;
+    margin-bottom: 15px; 
+}
+.comparison-result p {
+    color: #666; 
+    font-style: italic;
+    padding: 2px;
+    text-align: left;
+
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    margin-left: 10px; 
+    background-color: #ff4d4d; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #ff3333; 
+}
+
+
+/* Styles for universities */
+.universities {
+    margin-left: 250px;
+}
+
+.university {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.university h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333; /* Set text color */
+}
+
+.university p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: #666; /* Set text color */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .universities {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+}
+
+.search-results {
+    display: none;
+}
