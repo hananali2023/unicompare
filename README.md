@@ -38,7 +38,7 @@ UniCompare lets prospective students search, filter, and compare universities fr
  
 ## How It Works
  
-Data is stored across two Firebase Realtime Database instances and fetched concurrently using `Promise.all`. The app handles three rank formats from the QS dataset — numeric (`42`), range (`660-700`), and capped (`1400+`) — with a custom sort function that normalizes all three for correct ordering.
+Data is stored across two Firebase Realtime Database instances and fetched concurrently using `Promise.all`. The app handles three rank formats from the QS dataset: numeric (`42`), range (`660-700`), and capped (`1400+`), with a custom sort function that normalizes all three for correct ordering.
  
 ```javascript
 // Fetches from both databases in parallel and merges
@@ -58,7 +58,7 @@ python3 -m http.server 8000
 # Open http://localhost:8000
 ```
  
-> The app fetches live data from public Firebase endpoints — no API keys or local setup needed.
+> The app fetches live data from public Firebase endpoints. No API keys or local setup needed.
  
 ---
  
