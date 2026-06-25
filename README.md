@@ -73,8 +73,8 @@ unicompare/
 ├── about-us.html
 ├── contact-us.html
 ├── script.js          # All data fetching, filtering, search, and comparison logic
-├── style.css          # Responsive styles
-├── img1.png           # Hero image
+├── style.css          
+├── img1.png           # Image on the main page of site
 └── README.md
 ```
  
